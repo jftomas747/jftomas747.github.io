@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="John Tomas's mechanical engineering portfolio: composites, robotics, embedded controls, computer vision, fabrication, and mechanical design." />
+  <meta name="author" content="John Tomas" />
+  <meta name="theme-color" content="#070b12" />
+
+  <title>John Tomas | Mechanical Engineering Portfolio</title>
+  <link rel="canonical" href="https://jftomas747.github.io/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="John Tomas | Engineering Portfolio" />
+  <meta property="og:description" content="Four engineering case studies spanning composites, robotics, controls, and mechanical design." />
+  <meta property="og:url" content="https://jftomas747.github.io/" />
+  <meta property="og:image" content="https://jftomas747.github.io/assets/social-card.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script>
+    document.documentElement.classList.add('js');
+    (() => {
+      let saved = null;
+      try { saved = localStorage.getItem('portfolio-theme'); } catch (_) {}
+      const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.dataset.theme = saved || preferred;
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "John Tomas",
+    "url": "https://jftomas747.github.io/",
+    "sameAs": ["https://github.com/jftomas747"],
+    "knowsAbout": [
+      "Mechanical engineering",
+      "Composite manufacturing",
+      "Robotics",
+      "Embedded controls",
+      "Computer vision",
+      "Mechanical design"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="John Tomas portfolio home">
+        <span class="brand-mark" aria-hidden="true">JT</span>
+        <span class="brand-copy">
+          <strong>John Tomas</strong>
+          <span>Engineering Portfolio</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button command-trigger" type="button" aria-label="Open project search" title="Search projects (Ctrl or Command + K)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" /></svg>
+          <span class="command-key" aria-hidden="true">⌘K</span>
+        </button>
+
+        <a class="icon-button" href="https://github.com/jftomas747" target="_blank" rel="noopener noreferrer" aria-label="Open John Tomas on GitHub" title="GitHub profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82a9.5 9.5 0 0 1 2.5.34c1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" /></svg>
+        </a>
+
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" /></svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" /></svg>
+        </button>
+
+        <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open navigation menu">
+          <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#projects">Projects</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#about">About</a>
+      <button class="mobile-command command-trigger" type="button">Quick launch <span>⌘K</span></button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow--two" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Mechanical Engineering · Selected Work</p>
+          <h1 id="hero-title">Engineering systems that <span class="gradient-text">move, sense, and endure.</span></h1>
+          <p class="hero-lede">
+            A connected portfolio of hands-on projects spanning composite fabrication, autonomous robotics, embedded control, computer vision, and mechanical design.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button--primary" href="#projects">
+              Explore the projects
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+            <button class="button button--secondary command-trigger" type="button">
+              Quick launch
+              <span class="button-key" aria-hidden="true">⌘K</span>
+            </button>
+          </div>
+
+          <dl class="hero-stats" aria-label="Portfolio summary">
+            <div><dt>4</dt><dd>Featured projects</dd></div>
+            <div><dt>3</dt><dd>Engineering domains</dd></div>
+            <div><dt>1</dt><dd>Connected portfolio</dd></div>
+          </dl>
+        </div>
+
+        <div class="system-map reveal" aria-label="Interactive map of the four featured projects">
+          <div class="map-orbit map-orbit--outer" aria-hidden="true"></div>
+          <div class="map-orbit map-orbit--inner" aria-hidden="true"></div>
+          <svg class="map-lines" viewBox="0 0 620 520" preserveAspectRatio="none" aria-hidden="true">
+            <path class="map-line map-line--b2" d="M310 260 C245 200 184 136 108 100" />
+            <path class="map-line map-line--romi" d="M310 260 C384 205 444 138 516 103" />
+            <path class="map-line map-line--qarm" d="M310 260 C384 318 441 382 509 418" />
+            <path class="map-line map-line--carrier" d="M310 260 C240 315 182 379 111 416" />
+          </svg>
+
+          <div class="map-core" aria-hidden="true">
+            <span>JT</span>
+            <small>Engineering</small>
+          </div>
+
+          <a class="map-node map-node--b2" href="#b2-spirit" data-map-project="b2">
+            <span class="map-node__index">01</span>
+            <strong>B-2 Spirit</strong>
+            <small>Composites</small>
+          </a>
+          <a class="map-node map-node--romi" href="#romi-robot" data-map-project="romi">
+            <span class="map-node__index">02</span>
+            <strong>Romi Robot</strong>
+            <small>Embedded controls</small>
+          </a>
+          <a class="map-node map-node--qarm" href="#qarm-tictactoe" data-map-project="qarm">
+            <span class="map-node__index">03</span>
+            <strong>QArm</strong>
+            <small>Vision + robotics</small>
+          </a>
+          <a class="map-node map-node--carrier" href="#composite-carrier" data-map-project="carrier">
+            <span class="map-node__index">04</span>
+            <strong>Carrier</strong>
+            <small>Mechanical design</small>
+          </a>
+
+          <div class="map-label" aria-hidden="true"><span></span> Select a node</div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#projects" aria-label="Scroll to projects">
+        <span>Scroll to explore</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6" /></svg>
+      </a>
+    </section>
+
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> Project Index</p>
+            <h2 id="projects-title">Four projects. One engineering story.</h2>
+          </div>
+          <p>
+            Filter by discipline, open a technical summary, or launch any full project site for detailed documentation, media, and results.
+          </p>
+        </div>
+
+        <div class="filter-row reveal">
+          <div class="filter-group" role="group" aria-label="Filter projects by discipline">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work <span>4</span></button>
+            <button class="filter-button" type="button" data-filter="robotics" aria-pressed="false">Robotics <span>2</span></button>
+            <button class="filter-button" type="button" data-filter="composites" aria-pressed="false">Composites <span>1</span></button>
+            <button class="filter-button" type="button" data-filter="design" aria-pressed="false">Mechanical design <span>1</span></button>
+          </div>
+          <p class="filter-status" id="filter-status" aria-live="polite">Showing all four projects</p>
+        </div>
+
+        <div class="projects-grid" id="project-grid">
+          <article class="project-card project-card--wide reveal" id="b2-spirit" data-category="composites manufacturing" data-project-card="b2">
+            <div class="project-card__media">
+              <img src="assets/b2-spirit.webp" alt="Finished glossy carbon-fiber B-2 Spirit model on a workbench" width="1600" height="901" loading="lazy" decoding="async" />
+              <span class="project-card__number" aria-hidden="true">01</span>
+              <span class="project-card__discipline">Composite manufacturing</span>
+              <a class="project-card__launch-icon" href="https://jftomas747.github.io/b2-spirit-mass-properties/" target="_blank" rel="noopener noreferrer" aria-label="Open the B-2 Spirit project site in a new tab">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+              </a>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>ME 318 Lab Upgrade</span><span>3.5 ft model</span></div>
+              <h3>B-2 Spirit Composite Model</h3>
+              <p>A larger carbon-fiber aircraft model created for mass-properties demonstrations using a 3D-printed core, wet layup, vacuum bagging, finishing, and repair.</p>
+              <ul class="tag-list" aria-label="B-2 Spirit project skills">
+                <li>Carbon fiber</li><li>Vacuum bagging</li><li>3D printing</li><li>Repair</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="text-button" type="button" data-project-open="b2">View technical summary <span aria-hidden="true">→</span></button>
+                <a href="https://jftomas747.github.io/b2-spirit-mass-properties/" target="_blank" rel="noopener noreferrer">Open project site <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--tall reveal" id="romi-robot" data-category="robotics controls embedded" data-project-card="romi">
+            <div class="project-card__media">
+              <img src="assets/romi.webp" alt="Top view of the assembled Romi robot with controller board, sensors, wheels, and wiring" width="1349" height="1600" loading="lazy" decoding="async" />
+              <span class="project-card__number" aria-hidden="true">02</span>
+              <span class="project-card__discipline">Embedded controls</span>
+              <a class="project-card__launch-icon" href="https://jftomas747.github.io/me405-final-website/" target="_blank" rel="noopener noreferrer" aria-label="Open the autonomous Romi project site in a new tab">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+              </a>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>ME 405 Final Project</span><span>2:00 official run</span></div>
+              <h3>Autonomous Romi Robot</h3>
+              <p>A differential-drive robot combining cooperative MicroPython tasks, closed-loop motor control, line sensing, encoders, an IMU, bump sensing, and state-based navigation.</p>
+              <ul class="tag-list" aria-label="Romi project skills">
+                <li>MicroPython</li><li>Control systems</li><li>State estimation</li><li>FSMs</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="text-button" type="button" data-project-open="romi">View technical summary <span aria-hidden="true">→</span></button>
+                <a href="https://jftomas747.github.io/me405-final-website/" target="_blank" rel="noopener noreferrer">Open project site <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--tall reveal" id="qarm-tictactoe" data-category="robotics vision software" data-project-card="qarm">
+            <div class="project-card__media">
+              <img src="assets/qarm.webp" alt="Quanser QArm positioned over a tic-tac-toe board with blue and neutral character tokens" width="1600" height="1448" loading="lazy" decoding="async" />
+              <span class="project-card__number" aria-hidden="true">03</span>
+              <span class="project-card__discipline">Vision + robotics</span>
+              <a class="project-card__launch-icon" href="https://jftomas747.github.io/me423_robotics_tictactoe_project/" target="_blank" rel="noopener noreferrer" aria-label="Open the QArm tic-tac-toe project site in a new tab">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+              </a>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>ME 423 Final Project</span><span>4-DOF robot</span></div>
+              <h3>QArm Tic-Tac-Toe Robot</h3>
+              <p>An interactive robotic arm that observes a human move, interprets the board with RGB vision, chooses a response with minimax, and places a game piece.</p>
+              <ul class="tag-list" aria-label="QArm project skills">
+                <li>OpenCV</li><li>Inverse kinematics</li><li>Minimax</li><li>Pick and place</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="text-button" type="button" data-project-open="qarm">View technical summary <span aria-hidden="true">→</span></button>
+                <a href="https://jftomas747.github.io/me423_robotics_tictactoe_project/" target="_blank" rel="noopener noreferrer">Open project site <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--wide reveal" id="composite-carrier" data-category="design manufacturing verification" data-project-card="carrier">
+            <div class="project-card__media">
+              <img src="assets/composite-carrier.webp" alt="Composite Carrier verification prototype mounted on a Genie material lift in the composites laboratory" width="621" height="818" loading="lazy" decoding="async" />
+              <span class="project-card__number" aria-hidden="true">04</span>
+              <span class="project-card__discipline">Mechanical design</span>
+              <a class="project-card__launch-icon" href="https://jftomas747.github.io/composite-carrier/" target="_blank" rel="noopener noreferrer" aria-label="Open the Composite Carrier project site in a new tab">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+              </a>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta"><span>Senior Project</span><span>3-subsystem design</span></div>
+              <h3>Composite Carrier</h3>
+              <p>A safer retrieval concept for elevated composite rolls using rack-mounted rotary latches, a ground-level pulley release, and a custom Genie dolly attachment.</p>
+              <ul class="tag-list" aria-label="Composite Carrier project skills">
+                <li>Mechanism design</li><li>CAD</li><li>Welding</li><li>Verification</li>
+              </ul>
+              <div class="project-card__actions">
+                <button class="text-button" type="button" data-project-open="carrier">View technical summary <span aria-hidden="true">→</span></button>
+                <a href="https://jftomas747.github.io/composite-carrier/" target="_blank" rel="noopener noreferrer">Open project site <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section-heading section-heading--compact reveal">
+          <div>
+            <p class="eyebrow"><span></span> Capabilities</p>
+            <h2 id="capabilities-title">From first concept to tested hardware.</h2>
+          </div>
+        </div>
+
+        <div class="capability-grid">
+          <button class="capability-card reveal" type="button" data-filter-jump="design">
+            <span class="capability-card__number">01</span>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 36 24 8l16 28H8Z" /><circle cx="24" cy="27" r="5" /><path d="M24 8v14M8 36l12-6m20 6-12-6" /></svg>
+            <h3>Design &amp; verification</h3>
+            <p>Mechanisms, requirements, CAD, prototyping, test planning, and iteration around real constraints.</p>
+            <span class="capability-link">Show design project <span aria-hidden="true">→</span></span>
+          </button>
+
+          <button class="capability-card reveal" type="button" data-filter-jump="composites">
+            <span class="capability-card__number">02</span>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 14h30v20H9z" /><path d="m9 20 30 14M9 28l15 6m0-20 15 7M16 14v20m16-20v20" /></svg>
+            <h3>Advanced manufacturing</h3>
+            <p>Composite layup, vacuum bagging, additive manufacturing, finishing, repair, welding, and assembly.</p>
+            <span class="capability-link">Show composites project <span aria-hidden="true">→</span></span>
+          </button>
+
+          <button class="capability-card reveal" type="button" data-filter-jump="robotics">
+            <span class="capability-card__number">03</span>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="17" width="26" height="20" rx="5" /><path d="M18 17V9h12v8M7 27h4m26 0h4M18 42v-5m12 5v-5" /><circle cx="19" cy="27" r="2" /><circle cx="29" cy="27" r="2" /></svg>
+            <h3>Robotics &amp; controls</h3>
+            <p>Sensors, embedded software, finite-state machines, closed-loop control, estimation, vision, and autonomy.</p>
+            <span class="capability-link">Show robotics projects <span aria-hidden="true">→</span></span>
+          </button>
+        </div>
+
+        <div class="skill-rail reveal" aria-label="Engineering skills represented across the portfolio">
+          <span>Mechanical design</span><span>Composite fabrication</span><span>CAD</span><span>MicroPython</span><span>Computer vision</span><span>Control systems</span><span>Prototyping</span><span>Verification</span><span>3D printing</span><span>Technical documentation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div class="about-visual reveal" aria-hidden="true">
+          <div class="about-ring about-ring--one"></div>
+          <div class="about-ring about-ring--two"></div>
+          <div class="about-monogram">JT</div>
+          <div class="about-coordinate about-coordinate--one">DESIGN</div>
+          <div class="about-coordinate about-coordinate--two">BUILD</div>
+          <div class="about-coordinate about-coordinate--three">TEST</div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span></span> About this portfolio</p>
+          <h2 id="about-title">Engineering documented as a process, not just a final result.</h2>
+          <p>
+            These linked case studies bring together project work from Cal Poly laboratories and engineering courses. Each site traces the path from problem definition through design decisions, fabrication or implementation, testing, and final outcomes.
+          </p>
+          <p>
+            The common thread is systems thinking: understanding how mechanical hardware, materials, sensors, controls, software, and operators interact—and turning that understanding into working prototypes.
+          </p>
+          <div class="about-actions">
+            <button class="button button--primary command-trigger" type="button">Launch a project <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></button>
+            <a class="button button--secondary" href="https://github.com/jftomas747" target="_blank" rel="noopener noreferrer">View GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand brand--footer" href="#home">
+          <span class="brand-mark" aria-hidden="true">JT</span>
+          <span class="brand-copy"><strong>John Tomas</strong><span>Mechanical Engineering Portfolio</span></span>
+        </a>
+      </div>
+      <p>Four project sites, connected in one place.</p>
+      <div class="footer-links">
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/jftomas747" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <span>© <span id="current-year">2026</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 6-6 6 6" /></svg>
+  </button>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" value="close" aria-label="Close project summary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+        </button>
+      </form>
+      <div class="dialog-accent" id="dialog-accent"></div>
+      <p class="dialog-eyebrow" id="dialog-eyebrow"></p>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-description" id="dialog-description"></p>
+      <div class="dialog-metrics" id="dialog-metrics"></div>
+      <div class="dialog-details">
+        <div><span>Challenge</span><p id="dialog-challenge"></p></div>
+        <div><span>Approach</span><p id="dialog-approach"></p></div>
+        <div><span>Outcome</span><p id="dialog-outcome"></p></div>
+      </div>
+      <ul class="tag-list dialog-tags" id="dialog-tags"></ul>
+      <a class="button button--primary dialog-launch" id="dialog-launch" href="#" target="_blank" rel="noopener noreferrer">Open full project site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+    </div>
+  </dialog>
+
+  <dialog class="command-dialog" id="command-dialog" aria-labelledby="command-title">
+    <div class="command-shell">
+      <div class="command-header">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" /></svg>
+        <label class="visually-hidden" for="command-search">Search projects</label>
+        <input id="command-search" type="search" autocomplete="off" placeholder="Search projects, tools, or disciplines…" />
+        <form method="dialog"><button class="command-escape" value="close" aria-label="Close search">Esc</button></form>
+      </div>
+      <p class="command-label" id="command-title">Quick launch</p>
+      <div class="command-results" id="command-results" role="listbox" aria-label="Project search results"></div>
+      <div class="command-footer"><span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span><span><kbd>Enter</kbd> Open</span><span><kbd>Esc</kbd> Close</span></div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
